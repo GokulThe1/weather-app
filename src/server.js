@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 const index_path=path.join(__dirname,'../public')
 const views_path=path.join(__dirname,'/templates/views')
 const partial_path=path.join(__dirname,'/templates/partials')
-
+const port=process.env.PORT || 3000
 app.set('view engine', 'hbs')
 app.set('views', views_path)
 hbs.registerPartials(partial_path)
@@ -66,6 +66,6 @@ hbs.registerPartials(partial_path)
      })
 
  })
- app.listen(3000,()=>{
+ app.listen(port,()=>{
      console.log('server started')
  })

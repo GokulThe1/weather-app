@@ -14,7 +14,8 @@ const forecast=(coordinates,callback)=>{
             callback('no match foundt',undefined)
         }
         else{
-            callback(undefined," current temperature is " +body.current.temperature)
+            callback(undefined," current temperature is " +body.current.temperature+" current humidity is " +body.current.humidity)
+            
             
     }
        
